@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT;
 
-const allowedOrigins = ['http://localhost:3000', 'https://iaoideoide.github.io/contacto'];
+const allowedOrigins = ['http://localhost:3000', 'https://iaoideoide.github.io'];
 const corsOptions = {
     origin: function (origin, callback) {
         if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
