@@ -67,7 +67,7 @@ app.post('/api/mail', [
     try {
         const info = await transporter.sendMail({
             from: `"Pagina Contacto" <${process.env.EMAIL_USER}>`,
-            to: "iairbarak@gmail.com",
+            to: process.env.EMAIL_RECIEVER,
             subject: `Mensaje de ${nombre}`,
             text: `Nombre: ${nombre}\nEmail: ${email}\nTeléfono: ${telefono}\nMensaje: ${mensaje}`,
             html: `<b>Nombre:</b> ${nombre}<br><b>Email:</b> ${email}<br><b>Teléfono:</b> ${telefono}<br><b>Mensaje:</b> ${mensaje}`,
